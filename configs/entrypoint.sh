@@ -6,7 +6,7 @@ if [[ "$COMMAND" == "extract" ]];then
   tar --same-owner -I pbzip2 -xvf /in/${COMPRESSED} -C /out/
 elif [[ "$COMMAND" == "remove" ]];then
     TARGET=$2
-    ls /in/$TARGET
+    rm -r /in/$TARGET
 elif [[ "$COMMAND" == "bash" ]];then
   /bin/bash
 fi
